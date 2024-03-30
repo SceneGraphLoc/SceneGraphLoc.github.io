@@ -114,7 +114,6 @@
                   <span>Code (release upon acceptance)</span>
                   </a>
               </span>
-    
             </div>
 
           </div>
@@ -128,8 +127,6 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/teaser.jpg" class="center"/>
-      <br><br>
       <h2 class="subtitle has-text-centered">
       <strong>SceneGraphLoc</strong> solves the novel problem of cross-modal localization of a query image within 3D scene graphs incorporating a mixture of modalities.
     </h2>
@@ -138,15 +135,27 @@
 </section>
 
     <!--/ Abstract. -->
-
+    <style>
+      .video-container {
+        max-width: 768px !important; /* Maximum video width */
+        margin: auto !important; /* Center the video */
+      }
+      
+      .video-container video {
+        width: 100% !important; /* Make the video fill its container */
+        height: auto !important; /* Scale the height according to the width to maintain aspect ratio */
+      }
+      </style>
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
+      <div class="column">
         <h2 class="title is-3">Explanatory Video</h2>
-        <video controls poster="static/images/VideoPoster.jpg">
-          <source src="static/videos/SceneGraphLoc.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <div class="video-container">
+          <video controls poster="static/images/VideoPoster.jpg">
+            <source src="static/videos/SceneGraphLoc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </div>
 </section>
@@ -182,7 +191,8 @@
         <div class="content has-text-justified">
           <p>
             By leveraging multi-modal information of the 3D scene graph, 
-            we associate patch-object matching between the query image and the objects within the scene graph.
+            we associate patch-object matching between the query image and the objects within the scene graph 
+              and calculate image-scene similarity score for scene retrieval.
           </p>
         </div>
         <h2 class="title is-4">Uncommon objects</h2>
@@ -222,232 +232,12 @@
     <!--/ Affordances 2 -->
   </div>
 
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-          <h2 class="title is-4">Affordances</h2>
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-
-      <!-- Affordances 1 -->
-      <div class="column">
-        <div class="content">
-          
-          <img src="static/images/aff1.jpeg"
-            class="interpolation-image">
-            <center>
-            <p>
-              <i >“sit”</i>
-            </p>
-          </center>
-        </div>
-      </div>
-      <!--/ Affordances 1 -->
-
-      <!-- Affordances 2 -->
-      <div class="column">
-        <div class="content">
-          
-          <img src="static/images/aff2.jpeg"
-            class="interpolation-image">
-            <center>
-            <p>
-              <i >“wash”</i>
-            </p>
-          </center>
-        </div>
-      </div>
-    <!--/ Affordances 2 -->
-  </div>
-
-
-
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-          <h2 class="title is-4">Object properties</h2>
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-
-      <!-- Affordances 1 -->
-      <div class="column">
-        <div class="content">
-          
-          <img src="static/images/color1.jpeg"
-            class="interpolation-image">
-            <center>
-            <p>
-              <i >“an orange pillow”</i>
-            </p>
-          </center>
-        </div>
-      </div>
-      <!--/ Affordances 1 -->
-
-      <!-- Affordances 2 -->
-      <div class="column">
-        <div class="content">
-          
-          <img src="static/images/color2.jpeg"
-            class="interpolation-image">
-            <center>
-            <p>
-              <i >“a yellow pillow”</i>
-            </p>
-          </center>
-        </div>
-      </div>
-    <!--/ Affordances 2 -->
-  </div>
-
-
-
-
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-          <h2 class="title is-4">Geometry</h2>
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-
-      <!-- Affordances 1 -->
-      <div class="column">
-        <div class="content">
-          
-          <img src="static/images/geo1.jpeg"
-            class="interpolation-image">
-            <center>
-            <p>
-              <i >“a circular table” </i>
-            </p>
-          </center>
-        </div>
-      </div>
-      <!--/ Affordances 1 -->
-
-      <!-- Affordances 2 -->
-      <div class="column">
-        <div class="content">
-          
-          <img src="static/images/geo2.jpeg"
-            class="interpolation-image">
-            <center>
-            <p>
-              <i >“a rectangular table” </i>
-            </p>
-          </center>
-        </div>
-      </div>
-    <!--/ Affordances 2 -->
-  </div>
-
-
-
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-          <h2 class="title is-4">Materials</h2>
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-
-      <!-- Affordances 1 -->
-      <div class="column">
-        <div class="content">
-          
-          <img src="static/images/mat1.jpeg"
-            class="interpolation-image">
-            <center>
-            <p>
-              <i >“a leather chair” </i>
-            </p>
-          </center>
-        </div>
-      </div>
-      <!--/ Affordances 1 -->
-
-      <!-- Affordances 2 -->
-      <div class="column">
-        <div class="content">
-          
-          <img src="static/images/mat2.jpeg"
-            class="interpolation-image">
-            <center>
-            <p>
-              <i >“a fabric chair” </i>
-            </p>
-          </center>
-        </div>
-      </div>
-    <!--/ Affordances 2 -->
-  </div>
-
-
-
-
-
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-          <h2 class="title is-4">States</h2>
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-
-      <!-- Affordances 1 -->
-      <div class="column">
-        <div class="content">
-          
-          <img src="static/images/state1.jpeg"
-            class="interpolation-image">
-            <center>
-            <p>
-              <i >“a full garbage bin” </i>
-            </p>
-          </center>
-        </div>
-      </div>
-      <!--/ Affordances 1 -->
-
-      <!-- Affordances 2 -->
-      <div class="column">
-        <div class="content">
-          
-          <img src="static/images/state2.jpeg"
-            class="interpolation-image">
-            <center>
-            <p>
-              <i >“an empty garbage bin” </i>
-            </p>
-          </center>
-        </div>
-      </div>
-    <!--/ Affordances 2 -->
-  </div>
-
 
 
 <h2 class="title is-3">BibTeX</h2>
 <pre><code>
-@inproceedings{takmaz2023openmask3d,
-  title={{OpenMask3D: Open-Vocabulary 3D Instance Segmentation}},
-  author={Takmaz, Ay{\c{c}}a and Fedele, Elisabetta and Sumner, Robert W. and Pollefeys, Marc and Tombari, Federico and Engelmann, Francis},
-  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
-year={2023}
-}</code></pre>
+...
+</code></pre>
 
 </section>
 
