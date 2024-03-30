@@ -131,12 +131,25 @@
       <img src="static/images/teaser.jpg" class="center"/>
       <br><br>
       <h2 class="subtitle has-text-centered">
-      <strong>OpenMask3D</strong> is a zero-shot approach to perform 3D instance segmentation with open-vocabulary queries.
+      <strong>SceneGraphLoc</strong> solves the novel problem of cross-modal localization of a query image within 3D scene graphs incorporating a mixture of modalities.
     </h2>
     </div>
   </div>
 </section>
 
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Explanatory Video</h2>
+        <video controls poster="static/images/VideoPoster.jpg">
+          <source src="static/videos/SceneGraphLoc.mov" type="video/mov">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -146,34 +159,16 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We introduce the task of open-vocabulary 3D instance segmentation.
-            Current approaches for 3D instance segmentation can typically only recognize object categories from a pre-defined closed set of classes that are annotated in the training datasets.
-            This results in important limitations for real-world applications where one might need to perform tasks guided by novel,
-            open-vocabulary queries related to a wide variety of objects.
-            Recently, open-vocabulary 3D scene understanding methods have emerged to address this problem by learning queryable features for each point in the scene.
-            While such a representation can be directly employed to perform semantic segmentation, existing methods cannot separate multiple object instances.
-            In this work, we address this limitation, and propose OpenMask3D, which is a zero-shot approach for open-vocabulary 3D instance segmentation.
-            Guided by predicted class-agnostic 3D instance masks, our model aggregates per-mask features via multi-view fusion of CLIP-based image embeddings.
-            Experiments and ablation studies on ScanNet200 and Replica show that OpenMask3D outperforms other open-vocabulary methods,
-            especially on the long-tail distribution. Qualitative experiments further showcase OpenMask3D's ability to segment
-            object properties based on free-form queries describing geometry, affordances, and materials.          
+            We introduce a novel problem, i.e., the localization of an input image within a multi-modal reference map represented by a database of 3D scene graphs. 
+            These graphs comprise multiple modalities, including object-level point clouds, images, attributes, and relationships between objects, offering a lightweight and efficient alternative to conventional methods that rely on extensive image databases. 
+            Given the available modalities, the proposed method SceneGraphLoc learns a fixed-sized embedding for each node (i.e., representing an object instance) in the scene graph, enabling effective matching with the objects visible in the input query image. 
+            This strategy significantly outperforms other cross-modal methods, even without incorporating images into the map embeddings. 
+            When images are leveraged, SceneGraphLoc achieves performance close to that of state-of-the-art techniques depending on large image databases, while requiring three orders-of-magnitude less storage and operating orders-of-magnitude faster. 
+            The code will be made public.        
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Explanatory Video</h2>
-        <video controls poster="static/images/explanatory_video_poster.jpeg">
-          <source src="static/videos/poster_session.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-</section>
 
 <section class="section">
   <div class="container is-max-desktop">
